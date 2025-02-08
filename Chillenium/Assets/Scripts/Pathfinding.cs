@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Pathfinding : MonoBehaviour
@@ -16,6 +14,7 @@ public class Pathfinding : MonoBehaviour
     }
 
     void Update() {
+        // update monster location to go towards player if we know location
         if (distance < sightRange && playerFound) {
             for (int i = 0; i < 5; i++) {
                 if (rays[i].collider.gameObject == player) {
@@ -30,14 +29,14 @@ public class Pathfinding : MonoBehaviour
         distance = Vector2.Distance(player.transform.position, transform.position);
         Vector2[] directions = new Vector2[5];
 
-        for (int i = 0; i < 5; i++) { //initialize 5 rays
+        for (int i = 0; i < 5; i++) { // initialize 5 rays
             directions[i] = player.transform.position - offsets[i] - transform.position;
             rays[i] = Physics2D.Raycast(transform.position, directions[i]);
         }
         
-        for (int i = 0; i < 5; i++) { //draw rays
+        for (int i = 0; i < 5; i++) { // draw rays
             if (rays[i].collider != null) {
-                playerFound = playerFound || rays[i].collider.gameObject == player; //true if at least one ray found player
+                playerFound = playerFound || rays[i].collider.gameObject == player; // true if at least one ray found player
                 if (rays[i].collider.gameObject == player) {
                     Debug.DrawRay(transform.position, directions[i], Color.green);
                 }
