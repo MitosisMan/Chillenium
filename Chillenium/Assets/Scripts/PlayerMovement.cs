@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public bool scissors, item2, item3, item4, item5 = false;
     [SerializeField] GameObject scissorsHitbox;
     [SerializeField] GameObject scissorsPopup;
+    [SerializeField] AnimationController animationController;
 
     void Start()
     {
