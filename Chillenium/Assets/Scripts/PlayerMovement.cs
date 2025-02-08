@@ -61,9 +61,13 @@ public class PlayerMovement : MonoBehaviour
             sr.sprite = sprites[spriteIndex];
         }else{
             if(intdirection == 2){
-                sr.sprite = sprites[8];
+                frameIndex = (int)(Time.time / (animationSpeed * 4)) % 4; // Loops 0-3
+                int spriteIndex = 28 + frameIndex; // Selects the correct sprite
+                sr.sprite = sprites[spriteIndex];
             }else if(intdirection == 1){
-                sr.sprite = sprites[4];
+                frameIndex = (int)(Time.time / (animationSpeed * 4)) % 4; // Loops 0-3
+                int spriteIndex = 24 + frameIndex; // Selects the correct sprite
+                sr.sprite = sprites[spriteIndex];
             }else if(intdirection == 0){
                 frameIndex = (int)(Time.time / (animationSpeed * 4)) % 4; // Loops 0-3
                 int spriteIndex = 16 + frameIndex; // Selects the correct sprite

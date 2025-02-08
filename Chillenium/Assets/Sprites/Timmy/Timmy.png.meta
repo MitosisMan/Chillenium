@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0c11cb56557c3ca40a61e6ec77f94361
+guid: bd3488e00142eb4418626082fd1cdd49
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_0
+      name: Timmy_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b221b1c4c5d484948b589402264dbe35
-      internalID: 431708225
+      spriteID: 756a55b173f578f4b8258e74e81e665f
+      internalID: 1577386357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_1
+      name: Timmy_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5049cca3d31f7841b46c3b148d7a6dd
-      internalID: 1251822643
+      spriteID: 3963f438132ab1f40a7c2f21d946a9db
+      internalID: -1715510709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_2
+      name: Timmy_2
       rect:
         serializedVersion: 2
         x: 2048
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b77a100891d4ab4794c02680ec419a2
-      internalID: 1517650751
+      spriteID: 4eb3c4545a52b664fb4f61b62303fff3
+      internalID: 616697448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_3
+      name: Timmy_3
       rect:
         serializedVersion: 2
         x: 3072
@@ -174,14 +174,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d914e030ec1cdd3439b8fbd8c2068624
-      internalID: -772690092
+      spriteID: 2bf2a6c6b721b7a4d84c8f85e1ed4be8
+      internalID: -459552018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_4
+      name: Timmy_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1330d47411d1541a1cb16dae363a21
+      internalID: -1295762331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timmy_5
       rect:
         serializedVersion: 2
         x: 0
@@ -195,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3ee6d2d097a77847949d7e1fe6ea109
-      internalID: 555846271
+      spriteID: faaf6670ff3d54d4a91e75594536a18d
+      internalID: -653210710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_5
+      name: Timmy_6
       rect:
         serializedVersion: 2
         x: 1024
@@ -216,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd722c5981647284da373d14d0508b60
-      internalID: 1311947379
+      spriteID: bc353df0c8f970a4ba7e22401862e052
+      internalID: -1567235747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_6
+      name: Timmy_7
       rect:
         serializedVersion: 2
         x: 2048
@@ -237,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44bcd0da4e16d6941bfbfafe053bc3bf
-      internalID: 1512229053
+      spriteID: 8fc01a9e98376b94aabcd19c06d8e6a3
+      internalID: 1104048235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_7
+      name: Timmy_8
       rect:
         serializedVersion: 2
         x: 3072
@@ -258,14 +279,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a130a757adb27484dbb688ec7e2d9524
-      internalID: -1310294474
+      spriteID: bb7951a56b7995b40883a8113b594bad
+      internalID: 306623746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_8
+      name: Timmy_9
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67867a7c8fd03c0479a454839b27b4c8
+      internalID: -613056452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timmy_10
       rect:
         serializedVersion: 2
         x: 0
@@ -279,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ebb3a5197117954c9894f01ea4e7037
-      internalID: -778579570
+      spriteID: a54833846f0a7d746b120c32e8c7a372
+      internalID: -508280140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_9
+      name: Timmy_11
       rect:
         serializedVersion: 2
         x: 1024
@@ -300,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f4c8a25d4504e14794365a21fcd94cd
-      internalID: 1776231725
+      spriteID: 30ea64fbaec61a644a329b68ee124785
+      internalID: -2064713209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_10
+      name: Timmy_12
       rect:
         serializedVersion: 2
         x: 2048
@@ -321,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7277874b63a76724ba0301caabc17d70
-      internalID: 569856096
+      spriteID: 13c1e73ba1010fd49b8ed780be2c5a35
+      internalID: -2032862095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_11
+      name: Timmy_13
       rect:
         serializedVersion: 2
         x: 3072
@@ -342,14 +384,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de8da291cf4a17f44a7317108f6e33d2
-      internalID: -1844633687
+      spriteID: b6666c5137ed72145aa89bcfcb019104
+      internalID: -2118004343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_12
+      name: Timmy_14
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173671d56f656e14393e24e0c2d866e9
+      internalID: 1928543872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timmy_15
       rect:
         serializedVersion: 2
         x: 0
@@ -363,14 +426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fd0816392c852144bc89cd15d5f92f4
-      internalID: 885993727
+      spriteID: ea89a1343b47f5a48ad0acf0db448537
+      internalID: 330913096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_13
+      name: Timmy_16
       rect:
         serializedVersion: 2
         x: 1024
@@ -384,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 392e8e1b4d5593d4c84f5bfe2edbb876
-      internalID: 548086061
+      spriteID: cd8c8240a143a484abff962ae9861e7a
+      internalID: -777586262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_14
+      name: Timmy_17
       rect:
         serializedVersion: 2
         x: 2048
@@ -405,14 +468,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b13765aa6d981541873633780a7c3c4
-      internalID: 173716105
+      spriteID: 3ac72f5add46036418f5440d755ddc5c
+      internalID: -1300622496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_15
+      name: Timmy_18
       rect:
         serializedVersion: 2
         x: 3072
@@ -426,14 +489,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf04b79bb52a2df409dbd3544888088e
-      internalID: 1435140219
+      spriteID: 7e3851a83d09d3046aabc2eb4ffa20ce
+      internalID: -1676799134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_16
+      name: Timmy_19
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25608b58760b83c4b871a40282e75150
+      internalID: 437061458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timmy_20
       rect:
         serializedVersion: 2
         x: 0
@@ -447,14 +531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9d98a0d46363a24c9e10c48db0d577e
-      internalID: -1835264070
+      spriteID: 90ec76e01edaa3049952ff6293a6e389
+      internalID: -1892980416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_17
+      name: Timmy_21
       rect:
         serializedVersion: 2
         x: 1024
@@ -468,14 +552,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18058080a3ee64e49babc0ad1841c024
-      internalID: 1470994635
+      spriteID: 28d25945254347043a6ae2bb4bc9b8cd
+      internalID: -1003131589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_18
+      name: Timmy_22
       rect:
         serializedVersion: 2
         x: 2048
@@ -489,14 +573,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03caaecb177b2c04a97e3a8f23e5b7fa
-      internalID: 758134425
+      spriteID: 4ab717102b9cc604c962ac92766a161d
+      internalID: -741587475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_19
+      name: Timmy_23
       rect:
         serializedVersion: 2
         x: 3072
@@ -510,14 +594,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac167b0a9c3804d42af1b53e8122ff78
-      internalID: -27204911
+      spriteID: 52f5100e53f46f244a071e898bbe1593
+      internalID: -668578856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_20
+      name: Timmy_24
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c7f03101f18aa49a3e2e5c3fac16ff
+      internalID: 552647275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timmy_25
       rect:
         serializedVersion: 2
         x: 0
@@ -531,14 +636,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 758e04306a3312c47a786650abd427a3
-      internalID: 1436149708
+      spriteID: 75192541c7076614f895bece566a8721
+      internalID: 1489727537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_21
+      name: Timmy_26
       rect:
         serializedVersion: 2
         x: 1024
@@ -552,14 +657,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bb9f442f93dd1a4fa7d105b1044afd8
-      internalID: -430995183
+      spriteID: 315fb8c9a10e20d478ee6ddf86715674
+      internalID: -737448354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_22
+      name: Timmy_27
       rect:
         serializedVersion: 2
         x: 2048
@@ -573,14 +678,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd65aa0d98347e445bb39ecbea1ce01d
-      internalID: -2121005521
+      spriteID: 92981161e7321af49a5bfda3d3529ed1
+      internalID: -400504781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Timmy_fullspritesheet_23
+      name: Timmy_28
       rect:
         serializedVersion: 2
         x: 3072
@@ -594,8 +699,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07dba2b963cef7441b9100c651adc4d9
-      internalID: -1319020826
+      spriteID: c03df78d35984f049b1a4cc902223ada
+      internalID: -1573297582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timmy_29
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43cdd208605bfc4ab6054bfd80fe6ae
+      internalID: -737920767
       vertices: []
       indices: 
       edges: []
@@ -611,30 +737,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Timmy_fullspritesheet_0: 431708225
-      Timmy_fullspritesheet_1: 1251822643
-      Timmy_fullspritesheet_10: 569856096
-      Timmy_fullspritesheet_11: -1844633687
-      Timmy_fullspritesheet_12: 885993727
-      Timmy_fullspritesheet_13: 548086061
-      Timmy_fullspritesheet_14: 173716105
-      Timmy_fullspritesheet_15: 1435140219
-      Timmy_fullspritesheet_16: -1835264070
-      Timmy_fullspritesheet_17: 1470994635
-      Timmy_fullspritesheet_18: 758134425
-      Timmy_fullspritesheet_19: -27204911
-      Timmy_fullspritesheet_2: 1517650751
-      Timmy_fullspritesheet_20: 1436149708
-      Timmy_fullspritesheet_21: -430995183
-      Timmy_fullspritesheet_22: -2121005521
-      Timmy_fullspritesheet_23: -1319020826
-      Timmy_fullspritesheet_3: -772690092
-      Timmy_fullspritesheet_4: 555846271
-      Timmy_fullspritesheet_5: 1311947379
-      Timmy_fullspritesheet_6: 1512229053
-      Timmy_fullspritesheet_7: -1310294474
-      Timmy_fullspritesheet_8: -778579570
-      Timmy_fullspritesheet_9: 1776231725
+      Timmy_0: 1577386357
+      Timmy_1: -1715510709
+      Timmy_10: -508280140
+      Timmy_11: -2064713209
+      Timmy_12: -2032862095
+      Timmy_13: -2118004343
+      Timmy_14: 1928543872
+      Timmy_15: 330913096
+      Timmy_16: -777586262
+      Timmy_17: -1300622496
+      Timmy_18: -1676799134
+      Timmy_19: 437061458
+      Timmy_2: 616697448
+      Timmy_20: -1892980416
+      Timmy_21: -1003131589
+      Timmy_22: -741587475
+      Timmy_23: -668578856
+      Timmy_24: 552647275
+      Timmy_25: 1489727537
+      Timmy_26: -737448354
+      Timmy_27: -400504781
+      Timmy_28: -1573297582
+      Timmy_29: -737920767
+      Timmy_3: -459552018
+      Timmy_4: -1295762331
+      Timmy_5: -653210710
+      Timmy_6: -1567235747
+      Timmy_7: 1104048235
+      Timmy_8: 306623746
+      Timmy_9: -613056452
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
