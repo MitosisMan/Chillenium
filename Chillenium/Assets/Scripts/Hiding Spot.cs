@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class HidingSpot : InteractableObj
 {
-    BoxCollider2D box;
-    void Start(){
-        box = GetComponent<BoxCollider2D>();
-    }
-
     public override void OnInteract(){
-        
+        if(!plint.pm.hiding){
+            plint.rb.velocity = new Vector2(0, 0);
+            plint.rb.position = transform.position;
+            plint.pm.hiding = true;
+        }else{
+            plint.pm.hiding=false;
+        }
     }
 }

@@ -6,7 +6,7 @@ public class InteractableObj : MonoBehaviour
 {
     [SerializeField] private GameObject Popup;
     public bool active = false;
-    [SerializeField] private PlayerInteractor plint;
+    public PlayerInteractor plint;
 
     private void Start()
     {
