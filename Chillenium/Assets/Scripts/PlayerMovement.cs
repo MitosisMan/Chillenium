@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 dir;
     public bool hiding = false;
     public bool minigaming = false;
+    public bool scissors, item2, item3, item4, item5 = false;
+    [SerializeField] GameObject scissorsHitbox;
+    [SerializeField] GameObject scissorsPopup;
 
     void Start()
     {
@@ -22,6 +25,15 @@ public class PlayerMovement : MonoBehaviour
             dir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             dir = Vector3.Normalize(dir);
             rb.velocity = dir * speed;
+        }
+    }
+
+    public void GainObject(string item){
+        minigaming = false;
+        if(item == "Scissors"){
+            Destroy(scissorsHitbox);
+            Destroy(scissorsPopup);
+            scissors = true;
         }
     }
 }

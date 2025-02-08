@@ -8,12 +8,13 @@ public class Minigame1 : MonoBehaviour
     [SerializeField] private Slider slide;  // The bar slider
     [SerializeField] private Slider progress;  // The bar slider
     [SerializeField] private RectTransform hookArea;  // UI element representing the catch zone
-    [SerializeField] private RectTransform fish;  // UI element representing the fish
+    [SerializeField] private Slider fish;  // UI element representing the fish
     [SerializeField] private float hookSpeed = .8f;  // Speed of player-controlled hook
     [SerializeField] private float successTime = 3f;  // Time required to catch the fish
+    [SerializeField] public string reward;
 
     private float velocity = 0;
-    private float gravity = -.8f;
+    private float gravity = -1f;
     private float catchProgress = 0f;
     private float fishDirection = 1;
 
@@ -38,7 +39,7 @@ public class Minigame1 : MonoBehaviour
 
         // Apply gravity
         velocity += gravity * Time.deltaTime;
-        velocity = Mathf.Min(velocity, .25f);
+        velocity = Mathf.Min(velocity, .3f);
 
         slide.value = Mathf.Clamp(slide.value + velocity, 0, 100);
         if(slide.value == 0){
@@ -49,29 +50,27 @@ public class Minigame1 : MonoBehaviour
     private void HandleFishMovement()
     {
         // Move fish up and down automatically
-        fish.anchoredPosition += new Vector2(fishDirection * Time.deltaTime * 100, 0);
+        fish.value += fishDirection * Time.deltaTime * 50;
 
         // Reverse direction if hitting bounds
-        if ((fish.anchoredPosition.x > 150 && fishDirection > 0) || (fish.anchoredPosition.x < 0 && fishDirection < 0))
+        if ((fish.value > 99 && fishDirection > 0) || (fish.value < 1 && fishDirection < 0))
         {
             fishDirection *= -1;
-        }else if(Random.Range(0f, 400f) <= 1){
+        }else if(Random.Range(0f, 350f) <= 1){
             fishDirection *= -1;
         }
     }
 
     private void CheckCatchCondition()
     {
-        // Normalize positions relative to their parent
-        float fishNormalizedY = fish.anchoredPosition.x / (hookArea.rect.width * 7) * 100;
-        
         // Check if fish is inside hook area
-        if (Mathf.Abs(fishNormalizedY - slide.value) < 20f) // Using a relative threshold
+        if (Mathf.Abs(fish.value - slide.value) < 25f) // Using a relative threshold
         {
             catchProgress += Time.deltaTime;
             if (catchProgress >= successTime)
             {
-                Debug.Log("Fish Caught!");
+                GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().GainObject(reward);
+                gameObject.SetActive(false);
             }
         }
         else
