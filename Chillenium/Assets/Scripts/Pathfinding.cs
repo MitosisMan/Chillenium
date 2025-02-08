@@ -11,7 +11,6 @@ public class Pathfinding : MonoBehaviour
     public float sightRange;
     private bool playerFound = false;
     private bool looking = false;
-
     private Vector3[] offsets = {
         Vector2.zero, new Vector2(0.5f, 0.5f), new Vector2(0.5f, -0.5f), 
         new Vector2(-0.5f, 0.5f), new Vector2(-0.5f, -0.5f)
@@ -19,27 +18,35 @@ public class Pathfinding : MonoBehaviour
 
     private RaycastHit2D[] rays = new RaycastHit2D[5];
     [SerializeField] private TileTest tiles;
-
     [SerializeField] GameObject[] checkpoints;
     int checkpointCount;
-
     List<PathFinderNode> path;
+
+    private SpriteRenderer sr;
+    private int intdirection = 0;
+    [SerializeField] private Sprite[] sprites;
+    private float animationSpeed = 0.15f; // Time per frame
+    private int frameIndex = 0; // Tracks animation frame
+
+    int offsetx = 37;
+    int offsety = 12;
 
     void Start()
     {
         rb = player.GetComponent<Rigidbody2D>();
         thisrb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update(){
     if (tiles != null && tiles.grid != null)
     {
-        Vector2 start = new Vector2(Mathf.RoundToInt(transform.position.x) + 5, Mathf.RoundToInt(transform.position.y) + 4); // Offset
+        Vector2 start = new Vector2(Mathf.RoundToInt(transform.position.x) + offsetx, Mathf.RoundToInt(transform.position.y) + offsety); // Offset
         Vector2 end;
         if(playerFound){
-            end = new Vector2(Mathf.RoundToInt(rb.position.x) + 5, Mathf.RoundToInt(rb.position.y) + 4);
+            end = new Vector2(Mathf.RoundToInt(rb.position.x) + offsetx, Mathf.RoundToInt(rb.position.y) + offsety);
         }else{
-            end = new Vector2(Mathf.RoundToInt(checkpoints[checkpointCount].transform.position.x) + 5, Mathf.RoundToInt(checkpoints[checkpointCount].transform.position.y) + 4); // Offset
+            end = new Vector2(Mathf.RoundToInt(checkpoints[checkpointCount].transform.position.x) + offsetx, Mathf.RoundToInt(checkpoints[checkpointCount].transform.position.y) + offsety); // Offset
         }
 
         path = FindPath(start, end, tiles.grid);
@@ -47,8 +54,8 @@ public class Pathfinding : MonoBehaviour
         if (path != null && path.Count > 1)
         {
             Vector2 nextStep = path[1].Position - (Vector2)transform.position;
-            nextStep.x -= 5;
-            nextStep.y -= 4; // Offset
+            nextStep.x -= offsetx;
+            nextStep.y -= offsety; // Offset
             thisrb.velocity = nextStep.normalized * speed;
         }
         else
@@ -57,6 +64,9 @@ public class Pathfinding : MonoBehaviour
                 StartCoroutine(LookAround());
             thisrb.velocity = Vector2.zero; // Stop if no path found or already at destination
         }
+
+        UpdateDirection();
+        AnimateSprite();
     }
 }
 
@@ -70,6 +80,37 @@ public class Pathfinding : MonoBehaviour
         looking = false;
     }
 
+    private void UpdateDirection()
+    {
+        if (thisrb.velocity.magnitude > 0) // Only update direction if moving
+        {
+            if (Mathf.Abs(thisrb.velocity.x) > -1 * thisrb.velocity.y)
+            {
+                intdirection = (thisrb.velocity.x > 0) ? 2 : 1; // Right = 2, Left = 1
+            }
+            else
+            {
+                intdirection = 0; // Down = 0
+            }
+        }
+    }
+
+    private void AnimateSprite()
+    {
+        if(intdirection == 2){
+            frameIndex = (int)(Time.time / (animationSpeed * 2)) % 6; // Loops 0-3
+            int spriteIndex = 15 + frameIndex; // Selects the correct sprite
+            sr.sprite = sprites[spriteIndex];
+        }else if(intdirection == 1){
+            frameIndex = (int)(Time.time / (animationSpeed * 2)) % 6; // Loops 0-3
+            int spriteIndex = 9 + frameIndex; // Selects the correct sprite
+            sr.sprite = sprites[spriteIndex];
+        }else if(intdirection == 0){
+            frameIndex = (int)(Time.time / (animationSpeed * 2)) % 9; // Loops 0-3
+            int spriteIndex = frameIndex; // Selects the correct sprite
+            sr.sprite = sprites[spriteIndex];
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -96,7 +137,7 @@ public class Pathfinding : MonoBehaviour
     }
 
     // A* Pathfinding Implementation with a Priority Queue
-    public List<PathFinderNode> FindPath(Vector2 start, Vector2 end, byte[,] grid)
+    public List<PathFinderNode> FindPath(Vector2 start, Vector2 end, int[,] grid)
     {
         int gridWidth = grid.GetLength(0);
         int gridHeight = grid.GetLength(1);

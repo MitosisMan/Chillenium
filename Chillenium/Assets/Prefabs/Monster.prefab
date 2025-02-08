@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0.115142345, b: 1, a: 1}
+  m_Sprite: {fileID: 408236062, guid: a716180e1e279a04997086c22a42ac91, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -106,6 +106,28 @@ MonoBehaviour:
   checkpoints:
   - {fileID: 0}
   - {fileID: 0}
+  sprites:
+  - {fileID: 408236062, guid: a716180e1e279a04997086c22a42ac91, type: 3}
+  - {fileID: 429975388, guid: a716180e1e279a04997086c22a42ac91, type: 3}
+  - {fileID: -1382422354, guid: a716180e1e279a04997086c22a42ac91, type: 3}
+  - {fileID: 1535000845, guid: a716180e1e279a04997086c22a42ac91, type: 3}
+  - {fileID: 143911044, guid: a716180e1e279a04997086c22a42ac91, type: 3}
+  - {fileID: 1237164693, guid: a716180e1e279a04997086c22a42ac91, type: 3}
+  - {fileID: 1986807781, guid: a716180e1e279a04997086c22a42ac91, type: 3}
+  - {fileID: 1528601768, guid: a716180e1e279a04997086c22a42ac91, type: 3}
+  - {fileID: -13192353, guid: a716180e1e279a04997086c22a42ac91, type: 3}
+  - {fileID: -530257618, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
+  - {fileID: -1220037791, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
+  - {fileID: -550665647, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
+  - {fileID: 1991072717, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
+  - {fileID: -1950148382, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
+  - {fileID: 685830824, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
+  - {fileID: 111767152, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
+  - {fileID: 732363087, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
+  - {fileID: 1106837226, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
+  - {fileID: -1528696323, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
+  - {fileID: 901165628, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
+  - {fileID: -660791007, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
 --- !u!61 &7668087930419918407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,7 +164,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
