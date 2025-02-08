@@ -2,12 +2,15 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class TileTest : MonoBehaviour {
+
+    public byte[,] grid = new byte[10, 10]; // this is the array of things we own
+    // assuming the map is a 8x8 and that the border is one tile wide
+    
     void Start () {
         Tilemap tilemap = GetComponent<Tilemap>();
 
         BoundsInt bounds = tilemap.cellBounds;
         TileBase[] allTiles = tilemap.GetTilesBlock(bounds);
-        byte[,] grid = null;
 
         for (int x = 0; x < bounds.size.x; x++) {
             for (int y = 0; y < bounds.size.y; y++) {

@@ -9,11 +9,15 @@ public class Pathfinding : MonoBehaviour
     private bool playerFound = false;
     private Vector3[] offsets = {Vector2.zero, new Vector2(0.5f, 0.5f), new Vector2(0.5f, -0.5f), new Vector2(-0.5f, 0.5f), new Vector2(-0.5f, -0.5f)}; //need Vector3 to do math with transform.position
     private RaycastHit2D[] rays = new RaycastHit2D[5];
+    // public List<PathFinderNode> FindPath(Point start, Point end, byte[,] grid);
+    // this is the list that the soruce code uses to map the best path from source to end
+    // its a list of points (in the bytemap)
 
     void Start() {
     }
 
     void Update() {
+        
         // update monster location to go towards player if we know location
         if (distance < sightRange && playerFound) {
             for (int i = 0; i < 5; i++) {
