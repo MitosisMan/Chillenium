@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pathfinding : MonoBehaviour
 {
     public GameObject player;
+    private PlayerMovement pm;
     private Rigidbody2D rb;
     private Rigidbody2D thisrb;
     public float speed;
@@ -15,6 +16,7 @@ public class Pathfinding : MonoBehaviour
         Vector2.zero, new Vector2(0.5f, 0.5f), new Vector2(0.5f, -0.5f), 
         new Vector2(-0.5f, 0.5f), new Vector2(-0.5f, -0.5f)
     };
+    float memint = 0;
 
     private RaycastHit2D[] rays = new RaycastHit2D[5];
     [SerializeField] private TileTest tiles;
@@ -36,6 +38,7 @@ public class Pathfinding : MonoBehaviour
         rb = player.GetComponent<Rigidbody2D>();
         thisrb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        pm = player.GetComponent<PlayerMovement>();
     }
 
     void Update(){
@@ -43,7 +46,7 @@ public class Pathfinding : MonoBehaviour
     {
         Vector2 start = new Vector2(Mathf.RoundToInt(transform.position.x) + offsetx, Mathf.RoundToInt(transform.position.y) + offsety); // Offset
         Vector2 end;
-        if(playerFound){
+        if(memint > 0){
             end = new Vector2(Mathf.RoundToInt(rb.position.x) + offsetx, Mathf.RoundToInt(rb.position.y) + offsety);
         }else{
             end = new Vector2(Mathf.RoundToInt(checkpoints[checkpointCount].transform.position.x) + offsetx, Mathf.RoundToInt(checkpoints[checkpointCount].transform.position.y) + offsety); // Offset
@@ -114,7 +117,7 @@ public class Pathfinding : MonoBehaviour
 
     private void FixedUpdate()
     {
-        playerFound = false;
+        memint -= Time.deltaTime;
 
         for (int i = 0; i < offsets.Length; i++)
         {
@@ -123,9 +126,9 @@ public class Pathfinding : MonoBehaviour
 
             if (rays[i].collider != null)
             {
-                if (rays[i].collider.gameObject == player)
+                if (rays[i].collider.gameObject == player && (!pm.hiding || memint > 0))
                 {
-                    playerFound = true;
+                    memint = 2;
                     Debug.DrawRay(transform.position, direction, Color.green);
                 }
                 else

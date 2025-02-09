@@ -7,11 +7,13 @@ public class PlayerInteractor : MonoBehaviour
     public List<InteractableObj> list = new List<InteractableObj>();
     public Rigidbody2D rb;
     public PlayerMovement pm;
+    public SpriteRenderer sr;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         pm = GetComponent<PlayerMovement>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update(){

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InteractableObj : MonoBehaviour
 {
-    [SerializeField] private GameObject Popup;
+    [SerializeField] public GameObject Popup;
     public bool active = false;
     public PlayerInteractor plint;
 
@@ -30,11 +30,12 @@ public class InteractableObj : MonoBehaviour
 
     void Update(){
         if(active){
-            Popup.SetActive(true);
+            if(!plint.pm.hiding)
+                Popup.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E)){
                 OnInteract();
             }
-        }else{
+        }else if(!plint.pm.hiding){
             Popup.SetActive(false);
         }
     }
