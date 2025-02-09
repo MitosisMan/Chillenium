@@ -6910,7 +6910,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.4133334, y: 3.4133334}
-    newSize: {x: 10.24, y: 10.24}
+    newSize: {x: 3.4133334, y: 3.4133334}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -6959,12 +6959,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -1999809429, guid: a8946bf2ef1ff064497424c9590ed12a, type: 3}
+  m_Sprite: {fileID: -1999809429, guid: 61a9cced34784924c8f1d06d7bb15c09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 3.4133334, y: 3.4133334}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6985,8 +6985,8 @@ MonoBehaviour:
   Popup: {fileID: 1660292668}
   active: 0
   plint: {fileID: 0}
-  normal: {fileID: -1999809429, guid: a8946bf2ef1ff064497424c9590ed12a, type: 3}
-  hiding: {fileID: -494801913, guid: a8946bf2ef1ff064497424c9590ed12a, type: 3}
+  normal: {fileID: -1999809429, guid: 61a9cced34784924c8f1d06d7bb15c09, type: 3}
+  hiding: {fileID: -494801913, guid: 61a9cced34784924c8f1d06d7bb15c09, type: 3}
   incutscene: 1
 --- !u!4 &279769765
 Transform:
