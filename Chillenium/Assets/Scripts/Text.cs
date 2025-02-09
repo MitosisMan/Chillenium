@@ -5,12 +5,12 @@ using UnityEngine;
 public class Text : MonoBehaviour
 {
     TMPro.TextMeshProUGUI textImg;
-    float startTime;
+    public float startTime;
     int ind = 0;
-    string s = "";
+    public string s = "";
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         startTime = Time.time;
         textImg = GetComponent<TMPro.TextMeshProUGUI>();

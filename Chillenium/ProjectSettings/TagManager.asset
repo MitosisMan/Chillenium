@@ -8,6 +8,7 @@ TagManager:
   - Checkpoint
   - Monster
   - Blackout
+  - Bed
   layers:
   - Default
   - TransparentFX
