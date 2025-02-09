@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 1cd00f4f35fd9ec4181e95fb4c4f2a41
-=======
-guid: 51aa6c989d97dac45ab8f097a908d89c
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -38,11 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
     filterMode: 0
-=======
-    filterMode: 1
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,20 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  spritePixelsToUnits: 512
-=======
   spritePixelsToUnits: 100
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -88,11 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
     textureCompression: 0
-=======
-    textureCompression: 1
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,7 +95,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
     sprites:
     - serializedVersion: 2
       name: IP_Couch_front_0
@@ -132,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a276376e7953aa24ba5657434e370999
-      internalID: 594658230
+      spriteID: 8614a585872520b4fa8656a55fe309ff
+      internalID: 1451245862
       vertices: []
       indices: 
       edges: []
@@ -153,15 +132,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2d7d99395b419e469983af3c432e051
-      internalID: 714979460
+      spriteID: 2bec4a95126c8f04e98f88fc491919cd
+      internalID: 1577543785
       vertices: []
       indices: 
       edges: []
       weights: []
-=======
-    sprites: []
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
     outline: []
     physicsShape: []
     bones: []
@@ -172,13 +148,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
     nameFileIdTable:
-      IP_Couch_front_0: 594658230
-      IP_Couch_front_1: 714979460
-=======
-    nameFileIdTable: {}
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
+      IP_Couch_front_0: 1451245862
+      IP_Couch_front_1: 1577543785
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
