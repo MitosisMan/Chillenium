@@ -7,7 +7,7 @@ public class Minigame1 : MonoBehaviour
     [SerializeField] private Slider progress;  // The bar slider
     [SerializeField] private RectTransform hookArea;  // UI element representing the catch zone
     [SerializeField] private Slider fish;  // UI element representing the fish
-    [SerializeField] private float hookSpeed = .8f;  // Speed of player-controlled hook
+    [SerializeField] private float hookSpeed = 1.5f;  // Speed of player-controlled hook
     [SerializeField] private float successTime = 3f;  // Time required to catch the fish
     [SerializeField] public string reward;
     [SerializeField] private GameObject mash;
