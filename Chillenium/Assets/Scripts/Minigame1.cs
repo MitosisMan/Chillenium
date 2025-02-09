@@ -11,6 +11,7 @@ public class Minigame1 : MonoBehaviour
     [SerializeField] private float successTime = 3f;  // Time required to catch the fish
     [SerializeField] public string reward;
     [SerializeField] private GameObject mash;
+    [SerializeField] AudioSource unlock;
 
     private float velocity = 0;
     private float gravity = -1f;
@@ -79,6 +80,7 @@ public class Minigame1 : MonoBehaviour
                 Debug.Log("Win" + reward);
                 gameObject.SetActive(false);
                 mash.SetActive(false);
+                unlock.Play();
             }
         }
         else

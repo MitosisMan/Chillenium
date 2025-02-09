@@ -6,6 +6,7 @@ public class HidingSpot : InteractableObj
     private SpriteRenderer mysr;
     [SerializeField] Sprite normal;
     [SerializeField] Sprite hiding;
+    [SerializeField] AudioSource hide;
 
     void Awake(){
         mysr = GetComponent<SpriteRenderer>();

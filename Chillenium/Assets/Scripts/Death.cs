@@ -5,6 +5,7 @@ using UnityEngine;
 public class Death : MonoBehaviour
 {
     PlayerMovement pm;
+    [SerializeField] AudioSource grab;
 
     void Start(){
         pm = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
@@ -15,6 +16,7 @@ public class Death : MonoBehaviour
         if (collision.CompareTag("Monster"))
         {
             pm.paused = true;
+            grab.Play();
             StartCoroutine(collision.gameObject.GetComponent<Pathfinding>().Kill());
         }
     }
