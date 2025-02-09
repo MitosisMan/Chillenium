@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pathfinding : MonoBehaviour
 {
@@ -64,6 +65,7 @@ public class Pathfinding : MonoBehaviour
             nextStep.x -= offsetx;
             nextStep.y -= offsety; // Offset
             thisrb.velocity = nextStep.normalized * speed * (pm.paused ? 0 : 1);
+            Debug.Log(thisrb.velocity.x + " " + thisrb.velocity.y);
         }
         else
         {
@@ -114,6 +116,8 @@ public class Pathfinding : MonoBehaviour
         dialogue.SetActive(true);
         dialogueText.SetActive(true);
         dialogueText.GetComponent<Text>().s = "But this was not how Timmy's dream really went...";
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("House");
     }
 
     private IEnumerator LookAround(){
