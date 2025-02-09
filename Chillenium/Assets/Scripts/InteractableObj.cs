@@ -35,7 +35,7 @@ public class InteractableObj : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.E)){
                 OnInteract();
             }
-        }else if(!plint.pm.hiding){
+        }else if(plint.enabled && !plint.pm.hiding){
             Popup.SetActive(false);
         }
     }

@@ -6,13 +6,17 @@ public class HidingSpot : InteractableObj
     private SpriteRenderer mysr;
     [SerializeField] Sprite normal;
     [SerializeField] Sprite hiding;
+    [SerializeField] public bool incutscene;
 
-    void Awake(){
+    void Awake()
+    {
         mysr = GetComponent<SpriteRenderer>();
     }
 
-    public override void OnInteract(){
-        if(!plint.pm.hiding){
+    public override void OnInteract()
+    {
+        if (!plint.pm.hiding)
+        {
             plint.rb.velocity = new Vector2(0, 0);
             loc = plint.rb.position;
             plint.rb.position = transform.position;
@@ -20,12 +24,23 @@ public class HidingSpot : InteractableObj
             plint.sr.color = Color.clear;
             mysr.sprite = hiding;
             base.Popup.SetActive(false);
-        }else{
-            plint.pm.hiding=false;
-            plint.sr.color = Color.white;
-            plint.rb.position = loc;
-            mysr.sprite = normal;
-            base.Popup.SetActive(true);
+
+            if (incutscene)
+            {
+                StartCoroutine(GameObject.FindWithTag("Player").GetComponent<Cutscene>().Scene3());
+            }
+        }
+        else
+        {
+            if (!incutscene)
+            {
+                plint.pm.hiding = false;
+                plint.sr.color = Color.white;
+                plint.rb.position = loc;
+                mysr.sprite = normal;
+                base.Popup.SetActive(true);
+            }
+
         }
     }
 }

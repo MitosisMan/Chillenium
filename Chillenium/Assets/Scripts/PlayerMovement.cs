@@ -117,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
             Destroy(ballHitbox);
             Destroy(ballPopup);
             ball = true;
+            StartCoroutine(GetComponent<Cutscene>().Scene5());
         }
     }
 }

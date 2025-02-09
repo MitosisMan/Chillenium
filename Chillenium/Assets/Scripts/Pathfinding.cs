@@ -75,6 +75,9 @@ public class Pathfinding : MonoBehaviour
         UpdateDirection();
         if(!pm.paused)
             AnimateSprite();
+    }else{
+        UpdateDirection();
+        AnimateSprite();
     }
 }
 
@@ -110,6 +113,7 @@ public class Pathfinding : MonoBehaviour
 
         dialogue.SetActive(true);
         dialogueText.SetActive(true);
+        dialogueText.GetComponent<Text>().s = "But this was not how Timmy's dream really went...";
     }
 
     private IEnumerator LookAround(){
@@ -143,10 +147,12 @@ public class Pathfinding : MonoBehaviour
             frameIndex = (int)(Time.time / (animationSpeed * 2)) % 6; // Loops 0-3
             int spriteIndex = 15 + frameIndex; // Selects the correct sprite
             sr.sprite = sprites[spriteIndex];
+            sr.flipX = false;
         }else if(intdirection == 1){
             frameIndex = (int)(Time.time / (animationSpeed * 2)) % 6; // Loops 0-3
             int spriteIndex = 9 + frameIndex; // Selects the correct sprite
             sr.sprite = sprites[spriteIndex];
+            sr.flipX = false;
         }else if(intdirection == 0){
             if(rb.position.x > thisrb.position.x){
                 sr.flipX = true;
