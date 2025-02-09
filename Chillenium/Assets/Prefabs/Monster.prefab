@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6693763186178091442}
   m_Layer: 2
   m_Name: Monster
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 408236062, guid: a716180e1e279a04997086c22a42ac91, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -101,9 +101,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   speed: 2
-  sightRange: 10
+  sightRange: 7
   tiles: {fileID: 0}
   checkpoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   sprites:
@@ -128,6 +131,28 @@ MonoBehaviour:
   - {fileID: -1528696323, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
   - {fileID: 901165628, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
   - {fileID: -660791007, guid: dd819a56f9ff1304583cb6df546895a6, type: 3}
+  killsprites:
+  - {fileID: 879574316, guid: aab299c23e7480247afb3a2a44c9a928, type: 3}
+  - {fileID: -962081685, guid: aab299c23e7480247afb3a2a44c9a928, type: 3}
+  - {fileID: 358394482, guid: aab299c23e7480247afb3a2a44c9a928, type: 3}
+  - {fileID: 580241522, guid: aab299c23e7480247afb3a2a44c9a928, type: 3}
+  - {fileID: -1301045661, guid: aab299c23e7480247afb3a2a44c9a928, type: 3}
+  - {fileID: 81541311, guid: aab299c23e7480247afb3a2a44c9a928, type: 3}
+  - {fileID: 2083195578, guid: aab299c23e7480247afb3a2a44c9a928, type: 3}
+  - {fileID: 293342939, guid: aab299c23e7480247afb3a2a44c9a928, type: 3}
+  - {fileID: 765759998, guid: aab299c23e7480247afb3a2a44c9a928, type: 3}
+  - {fileID: 2123534821, guid: 29268a2181186214982d1bcc3e7e0050, type: 3}
+  - {fileID: 1749014645, guid: 29268a2181186214982d1bcc3e7e0050, type: 3}
+  - {fileID: 221937929, guid: 29268a2181186214982d1bcc3e7e0050, type: 3}
+  - {fileID: -1870727438, guid: 29268a2181186214982d1bcc3e7e0050, type: 3}
+  - {fileID: -1032288340, guid: 29268a2181186214982d1bcc3e7e0050, type: 3}
+  - {fileID: -637975852, guid: 29268a2181186214982d1bcc3e7e0050, type: 3}
+  - {fileID: 304381343, guid: 29268a2181186214982d1bcc3e7e0050, type: 3}
+  - {fileID: -638140650, guid: 29268a2181186214982d1bcc3e7e0050, type: 3}
+  - {fileID: -375657537, guid: 29268a2181186214982d1bcc3e7e0050, type: 3}
+  blackout: {fileID: 0}
+  dialogue: {fileID: 0}
+  dialogueText: {fileID: 0}
 --- !u!61 &7668087930419918407
 BoxCollider2D:
   m_ObjectHideFlags: 0

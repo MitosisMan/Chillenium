@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 52ea56fec6292fc4c811111f7b8a9f6c
-=======
-guid: 95e1078136a36bc47a06210a954d5496
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -38,11 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
     filterMode: 0
-=======
-    filterMode: 1
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,20 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  spritePixelsToUnits: 512
-=======
   spritePixelsToUnits: 100
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -88,11 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
     textureCompression: 0
-=======
-    textureCompression: 1
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,7 +95,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
     sprites:
     - serializedVersion: 2
       name: IP_Couch_side_0
@@ -132,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a7c69df481b7fa4d9a524447bfebcd1
-      internalID: 169891259
+      spriteID: 4d75fb73c1ed03c42b6a4e55ae2861c4
+      internalID: 1016605992
       vertices: []
       indices: 
       edges: []
@@ -153,15 +132,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e19d5d79508dc247af8cc8f8f780db9
-      internalID: -306750518
+      spriteID: eeb00656fccc4bf43a1b1743dc8ce568
+      internalID: 1703508771
       vertices: []
       indices: 
       edges: []
       weights: []
-=======
-    sprites: []
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
     outline: []
     physicsShape: []
     bones: []
@@ -172,13 +148,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
     nameFileIdTable:
-      IP_Couch_side_0: 169891259
-      IP_Couch_side_1: -306750518
-=======
-    nameFileIdTable: {}
->>>>>>> c2e00b89dd8929fc9ec47fa1d47d496937853554
+      IP_Couch_side_0: 1016605992
+      IP_Couch_side_1: 1703508771
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
