@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Image Ball;
     [SerializeField] private Image Stick;
     [SerializeField] private Image Band;
+    [SerializeField] private AudioSource footsteps;
 
     public bool paused = false;
 
@@ -45,8 +46,17 @@ public class PlayerMovement : MonoBehaviour
 
             UpdateDirection();
             AnimateSprite();
-        }else{
+            if (footsteps.isPlaying == false) {
+                footsteps.Play();
+            }
+            if (footsteps.isPlaying && dir.magnitude == 0) {
+                footsteps.Stop();
+            }
+        } else{
             rb.velocity = Vector2.zero;
+            if (footsteps.isPlaying == true) {
+                footsteps.Stop();
+            }
         }
 
         Ball.color = (ball ? Color.white : Color.black);

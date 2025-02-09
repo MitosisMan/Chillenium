@@ -7,6 +7,7 @@ public class HidingSpot : InteractableObj
     [SerializeField] Sprite normal;
     [SerializeField] Sprite hiding;
     [SerializeField] public bool incutscene;
+    [SerializeField] AudioSource hide;
 
     void Awake()
     {
