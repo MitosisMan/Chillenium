@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Cutscene : MonoBehaviour
 {
@@ -175,5 +176,6 @@ public class Cutscene : MonoBehaviour
         dialogue.SetActive(false);
         dialogueText.SetActive(false);
         pm.paused = false;
+        SceneManager.LoadScene("House");
     }
 }

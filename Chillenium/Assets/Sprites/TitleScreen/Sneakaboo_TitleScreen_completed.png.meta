@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Sneakaboo_TitleScreen_completed_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6400
+        width: 3200
+        height: 3200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d4657bf05d4994282ac40de65b582d
+      internalID: -1776566567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sneakaboo_TitleScreen_completed_1
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 6400
+        width: 3200
+        height: 3200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1db138c1db6bd42ab352fe6f4ec96c
+      internalID: -238220191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sneakaboo_TitleScreen_completed_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3200
+        width: 3200
+        height: 3200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc711c2bb2616b4479fc0ee8d1c9b9de
+      internalID: 248722830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sneakaboo_TitleScreen_completed_3
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 3200
+        width: 3200
+        height: 3200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd0a346858c39c4b9ed095b92502ab6
+      internalID: -1266734479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sneakaboo_TitleScreen_completed_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3200
+        height: 3200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0c6771b5ec8494ea5012c6ab93a142
+      internalID: 5690317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sneakaboo_TitleScreen_completed_5
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 3200
+        height: 3200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8bb71b139eac341acc69f9fcfe11a6
+      internalID: 2076225391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +232,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sneakaboo_TitleScreen_completed_0: -1776566567
+      Sneakaboo_TitleScreen_completed_1: -238220191
+      Sneakaboo_TitleScreen_completed_2: 248722830
+      Sneakaboo_TitleScreen_completed_3: -1266734479
+      Sneakaboo_TitleScreen_completed_4: 5690317
+      Sneakaboo_TitleScreen_completed_5: 2076225391
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
