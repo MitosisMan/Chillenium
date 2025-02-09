@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: cb57dd9d17cf4ce41acbdbccf0f3c1f4
-=======
-guid: 39c427080569ce849b3bada1857d1e6f
->>>>>>> refs/remotes/origin/main
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -38,11 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
     filterMode: 1
-=======
-    filterMode: 0
->>>>>>> refs/remotes/origin/main
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -80,11 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
     textureCompression: 1
-=======
-    textureCompression: 0
->>>>>>> refs/remotes/origin/main
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
