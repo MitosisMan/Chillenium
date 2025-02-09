@@ -144,13 +144,15 @@ MonoBehaviour:
   dir: {x: 0, y: 0}
   hiding: 0
   minigaming: 0
-  scissors: 0
-  item2: 0
-  item3: 0
-  item4: 0
-  item5: 0
-  scissorsHitbox: {fileID: 0}
-  scissorsPopup: {fileID: 0}
+  stick: 0
+  band: 0
+  ball: 0
+  stickHitbox: {fileID: 0}
+  stickPopup: {fileID: 0}
+  bandHitbox: {fileID: 0}
+  bandPopup: {fileID: 0}
+  ballHitbox: {fileID: 0}
+  ballPopup: {fileID: 0}
   sprites:
   - {fileID: -1295762331, guid: bd3488e00142eb4418626082fd1cdd49, type: 3}
   - {fileID: -653210710, guid: bd3488e00142eb4418626082fd1cdd49, type: 3}
@@ -199,6 +201,7 @@ MonoBehaviour:
   list: []
   rb: {fileID: 0}
   pm: {fileID: 0}
+  sr: {fileID: 0}
 --- !u!212 &8607582131627118341
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -239,7 +242,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1577386357, guid: bd3488e00142eb4418626082fd1cdd49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

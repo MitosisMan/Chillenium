@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -7,12 +8,22 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 dir;
     public bool hiding = false;
     public bool minigaming = false;
-    public bool scissors, item2, item3, item4, item5 = false;
-    [SerializeField] GameObject scissorsHitbox;
-    [SerializeField] GameObject scissorsPopup;
+    public bool stick, band, ball = false;
+    [SerializeField] GameObject stickHitbox;
+    [SerializeField] GameObject stickPopup;
+    [SerializeField] GameObject bandHitbox;
+    [SerializeField] GameObject bandPopup;
+    [SerializeField] GameObject ballHitbox;
+    [SerializeField] GameObject ballPopup;
     private SpriteRenderer sr;
     private int intdirection = 0;
     [SerializeField] private Sprite[] sprites;
+
+    [SerializeField] private Image Ball;
+    [SerializeField] private Image Stick;
+    [SerializeField] private Image Band;
+
+    public bool paused = false;
 
     private float animationSpeed = 0.15f; // Time per frame
     private int frameIndex = 0; // Tracks animation frame
@@ -26,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // Movement Logic
-        if (!hiding && !minigaming)
+        if (!hiding && !minigaming && !paused)
         {
             dir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             dir = Vector3.Normalize(dir);
@@ -34,7 +45,13 @@ public class PlayerMovement : MonoBehaviour
 
             UpdateDirection();
             AnimateSprite();
+        }else{
+            rb.velocity = Vector2.zero;
         }
+
+        Ball.color = (ball ? Color.white : Color.black);
+        Stick.color = (stick ? Color.white : Color.black);
+        Band.color = (band ? Color.white : Color.black);
     }
 
     private void UpdateDirection()
@@ -83,11 +100,23 @@ public class PlayerMovement : MonoBehaviour
     public void GainObject(string item)
     {
         minigaming = false;
-        if (item == "Scissors")
+        if (item == "Stick")
         {
-            Destroy(scissorsHitbox);
-            Destroy(scissorsPopup);
-            scissors = true;
+            Destroy(stickHitbox);
+            Destroy(stickPopup);
+            stick = true;
+        }
+        if (item == "Band")
+        {
+            Destroy(bandHitbox);
+            Destroy(bandPopup);
+            band = true;
+        }
+        if (item == "Ball")
+        {
+            Destroy(ballHitbox);
+            Destroy(ballPopup);
+            ball = true;
         }
     }
 }

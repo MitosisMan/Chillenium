@@ -10,7 +10,6 @@ public class Pathfinding : MonoBehaviour
     private Rigidbody2D thisrb;
     public float speed;
     public float sightRange;
-    private bool playerFound = false;
     private bool looking = false;
     private Vector3[] offsets = {
         Vector2.zero, new Vector2(0.5f, 0.5f), new Vector2(0.5f, -0.5f), 
@@ -29,6 +28,11 @@ public class Pathfinding : MonoBehaviour
     [SerializeField] private Sprite[] sprites;
     private float animationSpeed = 0.15f; // Time per frame
     private int frameIndex = 0; // Tracks animation frame
+
+    [SerializeField] private Sprite[] killsprites;
+    [SerializeField] private GameObject blackout;
+    [SerializeField] private GameObject dialogue;
+    [SerializeField] private GameObject dialogueText;
 
     int offsetx = 37;
     int offsety = 12;
@@ -59,7 +63,7 @@ public class Pathfinding : MonoBehaviour
             Vector2 nextStep = path[1].Position - (Vector2)transform.position;
             nextStep.x -= offsetx;
             nextStep.y -= offsety; // Offset
-            thisrb.velocity = nextStep.normalized * speed;
+            thisrb.velocity = nextStep.normalized * speed * (pm.paused ? 0 : 1);
         }
         else
         {
@@ -69,9 +73,44 @@ public class Pathfinding : MonoBehaviour
         }
 
         UpdateDirection();
-        AnimateSprite();
+        if(!pm.paused)
+            AnimateSprite();
     }
 }
+
+    public IEnumerator Kill(){
+        pm.paused = true;
+        if(intdirection == 0){
+            if(rb.position.x > thisrb.position.x){
+                sr.flipX = true;
+            }else{
+                sr.flipX = false;
+            }
+            for(int i = 0; i < 9; i++){
+                sr.sprite = killsprites[i];
+                yield return new WaitForSeconds(.1f);
+                if(i%9 == 3){
+                    blackout.SetActive(true);
+                }
+            }
+        }else if(intdirection > 0){
+            if(intdirection == 2){
+                sr.flipX = true;
+            }else{
+                sr.flipX = false;
+            }
+            for(int i = 9; i < 18; i++){
+                sr.sprite = killsprites[i];
+                yield return new WaitForSeconds(.1f);
+                if(i%9 == 3){
+                    blackout.SetActive(true);
+                }
+            }
+        }
+
+        dialogue.SetActive(true);
+        dialogueText.SetActive(true);
+    }
 
     private IEnumerator LookAround(){
         looking = true;
@@ -109,6 +148,11 @@ public class Pathfinding : MonoBehaviour
             int spriteIndex = 9 + frameIndex; // Selects the correct sprite
             sr.sprite = sprites[spriteIndex];
         }else if(intdirection == 0){
+            if(rb.position.x > thisrb.position.x){
+                sr.flipX = true;
+            }else{
+                sr.flipX = false;
+            }
             frameIndex = (int)(Time.time / (animationSpeed * 2)) % 9; // Loops 0-3
             int spriteIndex = frameIndex; // Selects the correct sprite
             sr.sprite = sprites[spriteIndex];
@@ -118,6 +162,7 @@ public class Pathfinding : MonoBehaviour
     private void FixedUpdate()
     {
         memint -= Time.deltaTime;
+        speed = 2;
 
         for (int i = 0; i < offsets.Length; i++)
         {
@@ -129,6 +174,7 @@ public class Pathfinding : MonoBehaviour
                 if (rays[i].collider.gameObject == player && (!pm.hiding || memint > 0))
                 {
                     memint = 2;
+                    speed = 5;
                     Debug.DrawRay(transform.position, direction, Color.green);
                 }
                 else

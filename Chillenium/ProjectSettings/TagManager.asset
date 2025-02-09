@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Canvas
   - Checkpoint
+  - Monster
+  - Blackout
   layers:
   - Default
   - TransparentFX

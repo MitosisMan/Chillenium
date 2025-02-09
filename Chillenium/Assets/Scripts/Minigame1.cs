@@ -10,11 +10,17 @@ public class Minigame1 : MonoBehaviour
     [SerializeField] private float hookSpeed = .8f;  // Speed of player-controlled hook
     [SerializeField] private float successTime = 3f;  // Time required to catch the fish
     [SerializeField] public string reward;
+    [SerializeField] private GameObject mash;
 
     private float velocity = 0;
     private float gravity = -1f;
     private float catchProgress = 0f;
     private float fishDirection = 1;
+
+    void Awake(){
+        mash.SetActive(true);
+        progress.value = 0;
+    }
 
     private void Update()
     {
@@ -62,13 +68,17 @@ public class Minigame1 : MonoBehaviour
     private void CheckCatchCondition()
     {
         // Check if fish is inside hook area
-        if (Mathf.Abs(fish.value - slide.value) < 25f) // Using a relative threshold
+        if (Mathf.Abs(fish.value - slide.value) < 20f) // Using a relative threshold
         {
             catchProgress += Time.deltaTime;
             if (catchProgress >= successTime)
             {
                 GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().GainObject(reward);
+                progress.value = 0;
+                catchProgress = 0;
+                Debug.Log("Win" + reward);
                 gameObject.SetActive(false);
+                mash.SetActive(false);
             }
         }
         else

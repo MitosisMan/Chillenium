@@ -10,7 +10,15 @@ public class UIManager : MonoBehaviour
     }
 
     public void minigame(string reward){
-        if(reward == "Scissors" && !pm.scissors){
+        if(reward == "Stick" && !pm.stick){
+            minigame1.SetActive(true);
+            minigame1.GetComponent<Minigame1>().reward = reward;
+        }
+        if(reward == "Ball" && !pm.ball){
+            minigame1.SetActive(true);
+            minigame1.GetComponent<Minigame1>().reward = reward;
+        }
+        if(reward == "Band" && !pm.band){
             minigame1.SetActive(true);
             minigame1.GetComponent<Minigame1>().reward = reward;
         }
